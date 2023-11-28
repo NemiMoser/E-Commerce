@@ -6,14 +6,23 @@ class Tag extends Model {}
 
 Tag.init(
   {
-    // define columns
+    type: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+    allowNull: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'tag',
+    modelName: 'Tag',
   }
 );
 
