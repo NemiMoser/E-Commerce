@@ -7,7 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "seed:categories": "node seeds/category-seeds.js",
+    "seed:products": "node seeds/product-seeds.js",
+    "seed:tags": "node seeds/tag-seeds.js",
+    "seed:productTags": "node seeds/product-tags-seeds.js",
+    "seed:all": "npm run seed:categories && npm run seed:products && npm run seed:tags && npm run seed:productTags"
   },
   "repository": {
     "type": "git",
@@ -22,7 +27,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mysql2": "^2.1.0",
-    "sequelize": "^5.21.7"
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.35.1"
   }
 }
